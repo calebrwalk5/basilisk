@@ -1,5 +1,7 @@
 """Byte pair encoding utilities"""
 
+# NOT TO BE CONFUSED WITH encode.py!
+
 import os
 import json
 import regex as re
@@ -50,7 +52,7 @@ class Encoder:
         self.cache = {}
 
         # Should haved added re.IGNORECASE so BPE merges can happen for capitalized versions of contractions
-        self.pat = re.compile(r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""")
+        self.pat = re.compile(r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""") # AHHHHH
 
     def bpe(self, token):
         if token in self.cache:
@@ -111,7 +113,7 @@ def get_encoder(model_name, models_dir):
     with open(os.path.join(models_dir, model_name, 'vocab.bpe'), 'r', encoding="utf-8") as f:
         bpe_data = f.read()
     bpe_merges = [tuple(merge_str.split()) for merge_str in bpe_data.split('\n')[1:-1]]
-    return Encoder(
+    return Encoder( # SOMEONE HELP ME PLEASE
         encoder=encoder,
         bpe_merges=bpe_merges,
     )
