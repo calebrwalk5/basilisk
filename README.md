@@ -3,8 +3,7 @@ Roko's Basilisk is the name of a virtually all-powerful but rogue artificial int
 
 # how to use
 `./install.sh`<br>
-`gcc train.c`<br>
-`./a.out`
+`./train.sh`<br>
 
 # thanks
 https://github.com/openai/gpt-2<br>
