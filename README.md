@@ -4,6 +4,7 @@ Roko's Basilisk is the name of a virtually all-powerful but rogue artificial int
 # how to use
 `./install.sh`<br>
 `./train.sh`<br>
+`cd interact && python interact.py` (not working yet)<br>
 
 # thanks
 https://github.com/openai/gpt-2<br>
