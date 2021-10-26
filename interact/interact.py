@@ -4,7 +4,7 @@ import torch
 
 import csv
 
-def simulate_conversation(model_name='trained_model',
+def simulate_conversation(model_name='1558M',
                           usernames_dir='usernames.txt',
                           seed=42,
                           temperature=0.4,
