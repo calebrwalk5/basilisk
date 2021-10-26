@@ -36,7 +36,7 @@ def load_dataset(enc, path, combine, encoding=None):
                 token_chunks.append(tokens)
                 raw_text = ''
             else:
-                raw_text += '<|endoftext|>'
+                raw_text += '<|endoftext|>' # Use this tag to end text
     if raw_text:
         tokens = np.stack(enc.encode(raw_text))
         token_chunks.append(tokens)
@@ -56,11 +56,6 @@ def binary_search(f, lo, hi):
 
 
 class Sampler(object):
-    """Fairly samples a slice from a set of variable sized chunks.
-
-    'Fairly' means that the distribution is the same as sampling from one concatenated chunk,
-    but without crossing chunk boundaries."""
-
     def __init__(self, chunks, seed=None):
         self.chunks = chunks
         self.total_size = sum(chunk.shape[0] for chunk in chunks)
