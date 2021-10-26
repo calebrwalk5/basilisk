@@ -3,3 +3,8 @@ regex==2017.4.5
 requests==2.21.0
 tqdm==4.31.1
 toposort==1.5
+torch==1.9.0
+transformers.egg==info
+dataclasses==0.8
+PyYAML==5.4.1
+transformers==4.10.3
