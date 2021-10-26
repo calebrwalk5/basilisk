@@ -5,7 +5,7 @@ import torch
 import csv
 
 def simulate_conversation(model_name='trained_model',
-                          usernames_dir='DMsParsedUsernames.txt',
+                          usernames_dir='usernames.txt',
                           seed=42,
                           temperature=0.4,
                           max_length=256,
