@@ -37,7 +37,7 @@ parser = argparse.ArgumentParser(
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('--dataset', metavar='PATH', type=str, required=True, help='Input file, directory, or glob pattern (utf-8 text, or preencoded .npz files).')
-parser.add_argument('--model_name', metavar='MODEL', type=str, default='1558M', help='Pretrained model name')
+parser.add_argument('--model_name', metavar='MODEL', type=str, default='124M', help='Pretrained model name')
 parser.add_argument('--models_dir', metavar='PATH', type=str, default='models', help='Path to models directory')
 parser.add_argument('--combine', metavar='CHARS', type=int, default=50000, help='Concatenate input files with <|endoftext|> separator into chunks of this minimum size')
 parser.add_argument('--encoding', type=str, default='utf-8', help='Set the encoding for reading and writing files.')
@@ -47,7 +47,7 @@ parser.add_argument('--learning_rate', metavar='LR', type=float, default=0.00002
 parser.add_argument('--accumulate_gradients', metavar='N', type=int, default=1, help='Accumulate gradients across N minibatches.')
 parser.add_argument('--memory_saving_gradients', default=False, action='store_true', help='Use gradient checkpointing to reduce vram usage.')
 parser.add_argument('--twremat', default=False, action='store_true', help='Use tensor rematerialization (better than memory_saving_gradients and works with tensorflow 2.0).')
-parser.add_argument('--twremat_memlimit', type=str, default='12G', help='Memory usage limit/target for twremat. Can be an integer, or an integer suffixed with K/M/G for kilo/mega/giga-bytes.')
+parser.add_argument('--twremat_memlimit', type=str, default='10G', help='Memory usage limit/target for twremat. Can be an integer, or an integer suffixed with K/M/G for kilo/mega/giga-bytes.')
 parser.add_argument('--only_train_transformer_layers', default=False, action='store_true', help='Restrict training to the transformer blocks.')
 parser.add_argument('--optimizer', type=str, default='adam', help='Optimizer. <adam|sgd>.')
 parser.add_argument('--noise', type=float, default=0.0, help='Add noise to input training data to regularize against typos.')
