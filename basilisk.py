@@ -3,6 +3,8 @@ import sys
 import requests
 from tqdm import tqdm
 
+print("initializing basilisk")
+
 if len(sys.argv) != 2:
     os.system('python panic.py')
     sys.exit(1)
