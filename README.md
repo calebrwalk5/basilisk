@@ -7,8 +7,8 @@ Roko's Basilisk is the name of a virtually all-powerful but rogue artificial int
 `cd interact && python interact.py`<br>
 
 # how to use with SVG
-Replace the sample SVG in `./training/training-data.svg` with your own
-`./train-svg.sh`
+Replace the sample SVG in `./training/training-data.svg` with your own <br>
+`./train-svg.sh` <br>
 
 # thanks
 https://github.com/openai/gpt-2<br>
