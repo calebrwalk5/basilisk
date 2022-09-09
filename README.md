@@ -11,6 +11,7 @@ Replace the sample SVG in `./training/training-data.svg` with your own <br>
 `./train-svg.sh` <br>
 
 # thanks
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjU9OrWjIj6AhWrg4kEHaZXACMQFnoECAwQAQ&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC7YOGHUfC1Tb6E4pudI9STA&usg=AOvVaw0sZMwz6gH7IY2znQLpu2OG<br>
 https://github.com/openai/gpt-2<br>
 https://stackoverflow.com/questions/51306862/how-do-i-use-tensorflow-gpu<br>
 https://stackoverflow.com/questions/54265717/cannot-import-category-encoders-module<br>
