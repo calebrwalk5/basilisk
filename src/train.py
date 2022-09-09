@@ -33,7 +33,7 @@ SAMPLE_DIR = 'samples'
 
 
 parser = argparse.ArgumentParser(
-    description='Fine-tune GPT-2 on your custom dataset.',
+    description='Custom GPT-2/Basilisk dataset',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('--dataset', metavar='PATH', type=str, required=True, help='Input file, directory, or glob pattern (utf-8 text, or preencoded .npz files).')
