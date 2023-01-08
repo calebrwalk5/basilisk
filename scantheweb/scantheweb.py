@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib
 import urllib.parse
+import time
 
 # Set the search term
 search_term = 'test'
@@ -23,6 +24,7 @@ print(len(links))
 
 # Download the .txt files
 for link in links:
+    time.sleep(5) # Wait 5 seconds so we don't get 503'd
     file_url = link['href']
     # Parse the URL query parameters
     query_params = urllib.parse.parse_qs(urllib.parse.urlsplit(file_url).query)
