@@ -4,11 +4,9 @@ Roko's Basilisk is the name of a virtually all-powerful but rogue artificial int
 # how to use
 `./install.sh`<br>
 `./train.sh`<br>
-`cd interact && python interact.py`<br>
 
-# how to use with SVG
-Replace the sample SVG in `./training/training-data.svg` with your own <br>
-`./train-svg.sh` <br>
+# scan the web
+`python scantheweb/scantheweb.py`
 
 # thanks
 https://www.youtube.com/c/MentalOutlaw<br>

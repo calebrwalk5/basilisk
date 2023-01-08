@@ -1,2 +1,1 @@
-while 1:
-  print "PANIC MODE"
+print "Basilisk Panic"
