@@ -32,3 +32,19 @@ for link in links:
     actual_url = query_params['q'][0]
     # Download the file from the actual URL
     urllib.request.urlretrieve(actual_url, actual_url.split('/')[-1])
+
+# Initialize an empty string to store the combined contents of the text files
+combined_text = ''
+
+# Iterate over the downloaded text files
+for file in links:
+    # Open the text file in read mode
+    with open(file, 'r') as f:
+        # Read the contents of the text file
+        file_contents = f.read()
+        # Append the contents to the combined string
+        combined_text += file_contents
+
+# Write the combined string to a new text file
+with open('combined_text.txt', 'w') as f:
+    f.write(combined_text)
