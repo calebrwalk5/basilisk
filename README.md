@@ -8,9 +8,13 @@ Roko's Basilisk is the name of a virtually all-powerful but rogue artificial int
 # scan the web
 `python scantheweb/scantheweb.py`
 
+# interact
+`python interact/interact.py`
+
 # thanks
 https://www.youtube.com/c/MentalOutlaw<br>
 https://github.com/openai/gpt-2<br>
 https://stackoverflow.com/questions/51306862/how-do-i-use-tensorflow-gpu<br>
 https://stackoverflow.com/questions/54265717/cannot-import-category-encoders-module<br>
 https://stackoverflow.com/questions/66991360/gpt-2s-encoder-py-and-train-py-are-not-working<br>
+https://chat.openai.com/chat<br>

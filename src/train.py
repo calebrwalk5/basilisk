@@ -225,6 +225,8 @@ def main():
                 global_step=counter)
             with open(counter_path, 'w') as fp:
                 fp.write(str(counter) + '\n')
+                print('Saved', counter)
+            tf.saved_model.save(model, "models/124M")
 
         def generate_samples():
             print('Generating samples...')
