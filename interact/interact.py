@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from transformers import AutoTokenizer
 
 # Load the model and tokenizer
-model = tf.keras.models.load_model("models/124M")
+model = tf.keras.models.load_model("models/124M") # My model
 tokenizer = AutoTokenizer.from_pretrained("text-davinci-002")
 
 def generate_text(prompt):

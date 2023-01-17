@@ -10,6 +10,7 @@ import tensorflow.compat.v1 as tf
 import tensorflow as tf2
 import time
 import tqdm
+# from model import build_model # Let's hope this works :) (it doesn't work)
 
 if tf.VERSION >= '2':
     tf.disable_eager_execution()
@@ -226,7 +227,8 @@ def main():
             with open(counter_path, 'w') as fp:
                 fp.write(str(counter) + '\n')
                 print('Saved', counter)
-            tf.saved_model.save(model, "models/124M")
+            my_model = model.build_model()
+            tf.saved_model.save(my_model, "models/124M") 
 
         def generate_samples():
             print('Generating samples...')
