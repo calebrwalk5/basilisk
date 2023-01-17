@@ -1,1 +1,1 @@
-print "Basilisk Panic"
+print("Basilisk Panic!")
