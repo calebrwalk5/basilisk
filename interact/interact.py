@@ -2,22 +2,23 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing.text import Tokenizer
 from transformers import AutoTokenizer
+from transformers import TFGPT2LMHeadModel
 
 # Load the model and tokenizer
-model = tf.train.Checkpoint()
-model.restore(tf.train.latest_checkpoint('models/124M/'))
+model = tf.compat.v1.train.import_meta_graph('models/124M/model.ckpt.meta')
+model.restore(tf.compat.v1.train.latest_checkpoint('models/124M/'))
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 def generate_text(prompt):
-    # Preprocess the prompt
-    prompt_encoded = tokenizer.texts_to_sequences([prompt])
-    prompt_encoded = tf.keras.preprocessing.sequence.pad_sequences(prompt_encoded, maxlen=1024)
-
-    # Use the model to generate text
-    generated_text = model.predict(prompt_encoded)
-
+    # Encode the prompt
+    input_ids = tokenizer.encode(prompt, return_tensors="tf")
+    
+    # Generate text
+    generated_text = model.predict(input_ids)
+    
     # Decode the generated text
-    generated_text = tokenizer.sequences_to_texts(generated_text)
+    generated_text = tokenizer.decode(generated_text.numpy()[0], skip_special_tokens=True)
+    
     return generated_text
 
 prompt = input("Enter a prompt to generate text: ")
