@@ -183,3 +183,18 @@ def model(hparams, X, past=None, scope='model', reuse=tf.AUTO_REUSE):
         logits = tf.reshape(logits, [batch, sequence, hparams.n_vocab])
         results['logits'] = logits
         return results
+
+class Model:
+    def __init__(self, hparams):
+        self.hparams = hparams
+        self.build_model()
+
+    def build_model(self):
+        self.inputs = tf.placeholder(tf.int32, [None, None])
+        self.labels = tf.placeholder(tf.int32, [None, None])
+        # other code to define the model's architecture, such as creating layers and defining the forward pass
+
+def build_model():
+    hparams = default_hparams()
+    # modify hparams as needed
+    return Model(hparams)
