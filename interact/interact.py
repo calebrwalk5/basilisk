@@ -4,8 +4,9 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from transformers import AutoTokenizer
 
 # Load the model and tokenizer
-model = tf.keras.models.load_model("models/124M") # My model
-tokenizer = AutoTokenizer.from_pretrained("text-davinci-002")
+model = tf.train.Checkpoint()
+model.restore(tf.train.latest_checkpoint('models/124M/'))
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 def generate_text(prompt):
     # Preprocess the prompt
